@@ -173,7 +173,7 @@ function likeQuote(e) {
 function deleteQuote(e) {
   const parentQuoteLi = e.target.closest('li');
   const quoteId = parseInt(parentQuoteLi.dataset['quoteId']);
-  
+    
   fetch(`http://localhost:3000/quotes/${quoteId}`, {
     method: "DELETE"
   }).then(_ => parentQuoteLi.remove())
